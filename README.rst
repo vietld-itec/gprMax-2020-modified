@@ -14,7 +14,7 @@ Installation
 
 1. Install Python, required Python packages, and get gprMax source
 ------------------------------------------------------------------
-* `Download and Anaconda3 <https://repo.anaconda.com/archive/Anaconda3-2020.11-Windows-x86_64.exe>`_.
+* `Download Anaconda Python 3.8 <https://repo.anaconda.com/archive/Anaconda3-2020.11-Windows-x86_64.exe>`_.
 * Open a Terminal Command Prompt (Windows) and run the following commands:
 
 .. code-block:: bash
