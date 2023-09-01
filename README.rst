@@ -88,7 +88,7 @@ We recommend using Miniconda to install Python and the required Python packages 
 
     $ conda update conda
     $ conda install git
-    $ git clone https://github.com/vietld-itec/gpr-Max-2020-modified
+    $ git clone https://github.com/vietld-itec/gprMax-rebuild
     $ cd gprMax-2020-modified
     $ conda env create -f conda_env.yml
 
