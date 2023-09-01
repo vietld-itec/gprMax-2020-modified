@@ -29,7 +29,7 @@ This will make sure conda is up-to-date, install Git, get the latest gprMax sour
 2. Install a C compiler which supports OpenMP
 ---------------------------------------------
 
-* Download and install `Microsoft Visual C++ 2015 Build Tools <BuildTools_Full.exe>`.
+* Download and install `Microsoft Visual C++ 2015 Build Tools <BuildTools_Full.exe>`_.
 
 3. Build and install gprMax
 ---------------------------
