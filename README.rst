@@ -130,19 +130,19 @@ a/	Export raw data and normalized data ( *.csv files): Plot Ascan, export rawdat
 
 .. code-block:: bash
 
-    python –m tools.plot_Ascan_raw outputfile.out –outputs Ez –rawdata
+    python –m tools.plot_Ascan_raw outputfile.out -–outputs Ez –rawdata
     
 b/	Plotting Ascan from rawdata. I won’t export data (not thing, don’t have *.csv file, this feature like plot_Ascan.py from gprMax package)
 
 .. code-block:: bash
 
-    python –m tools.plot_Ascan_raw outputfile.out –outputs Ez
+    python –m tools.plot_Ascan_raw outputfile.out -–outputs Ez
     
 c/ Plotting Ascan from normalized data
 
 .. code-block:: bash
 
-    python –m tools.plot_Ascan_raw outputfile.out –outputs Ez -plotnorm
+    python –m tools.plot_Ascan_raw outputfile.out -–outputs Ez -plotnorm
     
 2. plot_B_scan_gain.py
 ------------------------------------------------------------------
