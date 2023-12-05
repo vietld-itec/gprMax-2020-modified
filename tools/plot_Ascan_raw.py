@@ -85,10 +85,10 @@ def mpl_plot(filename, outputs=Rx.defaultoutputs, rawdata = False):
                 rowdata = str(time[i]) + "," + str(outputdata[i]) + "\n"
                 a_file.writelines(rowdata)
             a_file.close()
-        outputdata = norm(outputdata)
         time = time*1e+9
         #Simulated text file
         if rawdata:
+            outputdata = norm(outputdata)
             a_file = open(filename + "_norm.csv", "w")
             a_file.writelines("Time(ns),Normalized Amplitude\n")
             for i in range(len(outputdata)):
@@ -106,16 +106,19 @@ def mpl_plot(filename, outputs=Rx.defaultoutputs, rawdata = False):
        
         # plotting the points  
         plt.plot(time, outputdata, color='red', linewidth = 2,label='Simulated') 
-        # setting x and y axis range 
-        plt.ylim(-1,1) 
+        # setting x and y axis range  
         plt.xlim(0,np.max(time)) 
         
         plt.xticks(style='normal', fontsize=18)
         plt.yticks(style='normal', fontsize=18)
         # naming the x axis 
         plt.xlabel('Time [ns]', style='normal', fontsize=24) 
-        # naming the y axis 
-        plt.ylabel('Normalized Amplitude [-]', style='normal', fontsize=24) 
+        # naming the y axis
+        if rawdata:
+            plt.ylim(-1,1)
+            plt.ylabel('Normalized Amplitude [-]', style='normal', fontsize=24)
+        else:
+            plt.ylabel('Amplitude [V/m]', style='normal', fontsize=24)
         plt.legend(frameon=True, loc='upper center', ncol=2, fontsize=18)
         # giving a title to my graph 
         #plt.title('Comparison of A-scan', style='normal', fontsize=30)

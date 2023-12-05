@@ -1,0 +1,19 @@
+#title: Scripts file created by KIT-GeoGPR Program, number of step is 39
+#domain: 4 2.5 0.004
+#dx_dy_dz: 0.004 0.004 0.004
+#time_window: 1.4E-08
+#material: 1 0 1 0 Air
+#material: 3 0.01 1 0 Sand
+#material: 1 0 1 0 Cavity
+#waveform: ricker -0.00265252 1.5E+9 my_ricker
+#hertzian_dipole: z 2 2 0 my_ricker
+#rx: 2.1 2 0
+#box: 0 0 0 4 2 0.004 Sand
+#cylinder: 2 1 0 2 1 0.004 0.4 Cavity
+#geometry_view: 0 0 0 4 2.5 0.004 0.004 0.004 0.004 GEO_paraview n
+#python:
+from gprMax.input_cmd_funcs import *
+for i in range(1, 141):
+    snapshot(0, 0, 0, 4, 2.5, 0.004, 0.004, 0.004, 0.004, (i/10)*1e-9, 'snapshot' + str(i))
+#end_python:
+

@@ -1,0 +1,12 @@
+#title: Scripts file created by KIT-GeoGPR Program, number of step is 2
+#domain: 4 2.5 0.004
+#dx_dy_dz: 0.004 0.004 0.004
+#time_window: 1.4E-08
+#material: 1 0 1 0 Air
+#material: 3 0.01 1 0 Sand
+#material: 1 0 1 0 Cavity
+#waveform: ricker 1 1.5E+9 my_ricker
+#hertzian_dipole: z 1.9 2.2 0 my_ricker
+#rx: 2 2.2 0
+#box: 0 0 0 4 2 0.004 Sand
+#cylinder: 2 1 0 2 1 0.002 0.4 free_space

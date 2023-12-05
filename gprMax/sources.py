@@ -112,6 +112,7 @@ class VoltageSource(Source):
                     Ez[i, j, k] -= updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4] * self.waveformvaluesJ[iteration] * (1 / (self.resistance * G.dx * G.dy))
                 else:
                     Ez[i, j, k] = -1 * self.waveformvaluesJ[iteration] / G.dz
+            print('******dt={},x={}, y={}, z={}, Ez={}, waveform={}, resistance={}, coefficientE={}'.format(G.dt,i,j,k,Ez[i, j, k],self.waveformvaluesJ[iteration],self.resistance,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
 
     def create_material(self, G):
         """
@@ -143,7 +144,8 @@ class VoltageSource(Source):
                 newmaterial.se += G.dy / (self.resistance * G.dx * G.dz)
             elif self.polarisation == 'z':
                 newmaterial.se += G.dz / (self.resistance * G.dx * G.dy)
-
+            #print("****se:" + str(newmaterial.se))
+            print('******x={}, y={}, z={}, se={}, new_se={}'.format(i,j,k,material.se,newmaterial.se))
             G.ID[G.IDlookup[componentID], i, j, k] = newmaterial.numID
             G.materials.append(newmaterial)
 
@@ -180,7 +182,7 @@ class HertzianDipole(Source):
 
             elif self.polarisation == 'z':
                 Ez[i, j, k] -= updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4] * self.waveformvaluesJ[iteration] * self.dl * (1 / (G.dx * G.dy * G.dz))
-
+            print('******x={}, y={}, z={}, dl={}, nsrce={}'.format(i,j,k,self.dl,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
 
 class MagneticDipole(Source):
     """A magnetic dipole is an additive source (magnetic current density)."""
@@ -346,6 +348,7 @@ class TransmissionLine(Source):
         # Update the voltage at the position of the one-way injector excitation
         self.voltage[self.srcpos] += (c * G.dt / self.dl) * self.waveformvaluesJ[iteration]
 
+        print('******vol1={}, vol2={}, srcpos={}, nl={}, dl={}, current={}, current_previous={}'.format(self.voltage[1:self.nl],self.voltage[self.srcpos],self.srcpos,self.nl,self.dl,self.current[1:self.nl],self.current[0:self.nl - 1]))
         # Update ABC before updating current
         self.update_abc(G)
 
