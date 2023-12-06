@@ -150,48 +150,48 @@ a/	Plotting Bscan with raw data (time domain)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out
+    python –m tools.plot_Bscan_gain outputfile.out Ez
     
 b/	Plotting Bscan with normalized data (time domain)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out -norm
+    python –m tools.plot_Bscan_gain outputfile.out Ez -norm
     
 c/	Plotting Bscan with er (equivalent relative dielectric constant) with raw data (including depth axis)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –er 4.8
+    python –m tools.plot_Bscan_gain outputfile.out Ez –er 4.8
     
 d/	Plotting Bscan with er (equivalent relative dielectric constant) with normalized data (including depth axis)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –er 4.8 -norm
+    python –m tools.plot_Bscan_gain outputfile.out Ez –er 4.8 -norm
     
 e/	Plotting Bscan with er (equivalent relative dielectric constant) with raw data and also apply gain function (including depth axis)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –er 4.8 –gmin 1 –gmax 50
+    python –m tools.plot_Bscan_gain outputfile.out Ez –er 4.8 –gmin 1 –gmax 50
     
 f/	Plotting Bscan with er (equivalent relative dielectric constant) with normalized data and also apply gain function (including depth axis)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –er 4.8 -norm –gmin 1 –gmax 50
+    python –m tools.plot_Bscan_gain outputfile.out Ez –er 4.8 -norm –gmin 1 –gmax 50
     
 g/	Plotting Bscan with raw data and also apply gain function (time domain)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –gmin 1 –gmax 50
+    python –m tools.plot_Bscan_gain outputfile.out Ez –gmin 1 –gmax 50
     
 h/	Plotting Bscan with normalized data and also apply gain function (time domain)
 
 .. code-block:: bash
 
-    python –m tools.plot_Bscan_gain Ez outputfile.out –gmin 1 –gmax 50 -norm
+    python –m tools.plot_Bscan_gain outputfile.out Ez –gmin 1 –gmax 50 -norm
     
 (Contact to Author: viet.xd.bkdn@gmail.com / Kakaotalk ID: vietld1991)
