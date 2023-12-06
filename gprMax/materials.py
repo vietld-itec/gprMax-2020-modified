@@ -128,7 +128,7 @@ class Material(object):
         else:
             EA = (e0 * self.er / G.dt) + 0.5 * self.se
             EB = (e0 * self.er / G.dt) - 0.5 * self.se
-            print('******EA= {}, dt={}, e0={}, er={}, se={}'.format(EA,G.dt,e0,self.er,self.se))
+            #print('******EA= {}, dt={}, e0={}, er={}, se={}'.format(EA,G.dt,e0,self.er,self.se))
         if self.ID == 'pec' or self.se == float('inf'):
             self.CA = 0
             self.CBx = 0

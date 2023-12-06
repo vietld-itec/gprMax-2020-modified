@@ -12,4 +12,4 @@
 #src_steps: 0.1 0 0
 #rx_steps: 0.1 0 0
 #box: 0 0 0 4 2 0.004 Sand
-#cylinder: 2 1 0 2 1 0.002 0.4 Cavity
+#cylinder: 2 1 0 2 1 0.004 0.4 Cavity

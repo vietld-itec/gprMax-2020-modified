@@ -112,7 +112,7 @@ class VoltageSource(Source):
                     Ez[i, j, k] -= updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4] * self.waveformvaluesJ[iteration] * (1 / (self.resistance * G.dx * G.dy))
                 else:
                     Ez[i, j, k] = -1 * self.waveformvaluesJ[iteration] / G.dz
-            print('******dt={},x={}, y={}, z={}, Ez={}, waveform={}, resistance={}, coefficientE={}'.format(G.dt,i,j,k,Ez[i, j, k],self.waveformvaluesJ[iteration],self.resistance,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
+            #print('******dt={},x={}, y={}, z={}, Ez={}, waveform={}, resistance={}, coefficientE={}'.format(G.dt,i,j,k,Ez[i, j, k],self.waveformvaluesJ[iteration],self.resistance,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
 
     def create_material(self, G):
         """
@@ -145,7 +145,7 @@ class VoltageSource(Source):
             elif self.polarisation == 'z':
                 newmaterial.se += G.dz / (self.resistance * G.dx * G.dy)
             #print("****se:" + str(newmaterial.se))
-            print('******x={}, y={}, z={}, se={}, new_se={}'.format(i,j,k,material.se,newmaterial.se))
+            #print('******x={}, y={}, z={}, se={}, new_se={}'.format(i,j,k,material.se,newmaterial.se))
             G.ID[G.IDlookup[componentID], i, j, k] = newmaterial.numID
             G.materials.append(newmaterial)
 
@@ -182,7 +182,7 @@ class HertzianDipole(Source):
 
             elif self.polarisation == 'z':
                 Ez[i, j, k] -= updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4] * self.waveformvaluesJ[iteration] * self.dl * (1 / (G.dx * G.dy * G.dz))
-            print('******x={}, y={}, z={}, dl={}, nsrce={}'.format(i,j,k,self.dl,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
+            #print('******x={}, y={}, z={}, dl={}, nsrce={}'.format(i,j,k,self.dl,updatecoeffsE[ID[G.IDlookup[componentID], i, j, k], 4]))
 
 class MagneticDipole(Source):
     """A magnetic dipole is an additive source (magnetic current density)."""
